@@ -5,7 +5,7 @@
         private readonly string _name = Names.HARD_DIFFICULTY;
         public string Name { get => _name; }
 
-        public float GetBombsRatio() => 0.4f;
+        public float GetMinesRatio() => 0.4f;
 
         public int GetMapHeight() => 30;
 

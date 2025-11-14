@@ -1,5 +1,4 @@
-﻿using Minesweeper.Cells;
-using Minesweeper.Difficulties;
+﻿using Minesweeper.Difficulties;
 using Spectre.Console;
 using System.Runtime.InteropServices;
 

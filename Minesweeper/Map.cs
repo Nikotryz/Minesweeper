@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Minesweeper
 {
+    /// <summary>
+    /// Хранит данные о игровом поле и позволяет с ним взаимодействовать.
+    /// </summary>
     public class Map
     {
         private Cell[,] map;
@@ -112,7 +115,10 @@ namespace Minesweeper
             {
                 for (int column = 0; column < columns; column++)
                 {
-                    printableMap.Append($"{map[row, column].GetView()} ");
+                    if (column != columns - 1)
+                        printableMap.Append($"{map[row, column].GetView()} ");
+                    else
+                        printableMap.Append(map[row, column].GetView());
                 }
                 printableMap.Append('\n');
             }

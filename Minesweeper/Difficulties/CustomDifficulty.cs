@@ -15,7 +15,7 @@
             this.bombsRatio = bombsRatio;
         }
 
-        public float GetBombsRatio() => bombsRatio;
+        public float GetMinesRatio() => bombsRatio;
 
         public int GetMapHeight() => height;
 

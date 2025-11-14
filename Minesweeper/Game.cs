@@ -5,6 +5,9 @@ using System.Runtime.InteropServices;
 
 namespace Minesweeper
 {
+    /// <summary>
+    /// Представляет саму игру.
+    /// </summary>
     public class Game
     {
         private readonly IDifficulty difficulty;
@@ -48,7 +51,7 @@ namespace Minesweeper
 
         private void ConfigureMap()
         {
-            int minesCount = (int)(mapWidth * mapHeight * difficulty.GetBombsRatio());
+            int minesCount = (int)(mapWidth * mapHeight * difficulty.GetMinesRatio());
 
             map.OpenStartField(startRow: realCursorPos.Y, startColumn: realCursorPos.X);
 

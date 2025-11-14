@@ -1,5 +1,8 @@
 ﻿namespace Minesweeper
 {
+    /// <summary>
+    /// Хранит визуальные представления разных клеток.
+    /// </summary>
     public static class VisualElements
     {
         public const string BOMB_CELL = "*";

@@ -3,7 +3,7 @@
     public interface IDifficulty
     {
         string Name { get; }
-        float GetBombsRatio();
+        float GetMinesRatio();
         int GetMapHeight();
         int GetMapWidth();
     }
