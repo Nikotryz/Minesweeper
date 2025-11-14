@@ -1,7 +1,7 @@
 ﻿using Minesweeper.Cells;
 using System.Text;
 
-namespace Minesweeper
+namespace Minesweeper.GameService
 {
     /// <summary>
     /// Хранит данные о игровом поле и позволяет с ним взаимодействовать.

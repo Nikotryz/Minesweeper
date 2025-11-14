@@ -3,7 +3,7 @@ using Minesweeper.Difficulties;
 using Spectre.Console;
 using System.Runtime.InteropServices;
 
-namespace Minesweeper
+namespace Minesweeper.GameService
 {
     /// <summary>
     /// Представляет саму игру.
@@ -108,11 +108,6 @@ namespace Minesweeper
             PrintCursor();
         }
 
-        private void SetCursorByRealCords(int x, int y)
-        {
-            Console.SetCursorPosition(x*2, y);
-        }
-
         private void OpenCell()
         {
             if (movesCount == 0)
@@ -121,15 +116,16 @@ namespace Minesweeper
                 AnsiConsole.Clear();
                 PrintFrame();
             }
-            if (map.Is<Mine>(row: realCursorPos.Y, column: realCursorPos.X))
+            if (!GetCurrentCell().IsFlagged() && map.Is<Mine>(row: realCursorPos.Y, column: realCursorPos.X))
             {
                 isGameRunning = false;
                 OpenMap();
                 Console.SetCursorPosition(0, mapHeight + 4);
                 AnsiConsole.Markup("Поражение! Вы открыли ячейку с бомбой.\n");
             }
-            movesCount++;
             map.OpenCell(row: realCursorPos.Y, column: realCursorPos.X);
+            if (GetCurrentCell().IsOpened())
+                movesCount++;
         }
 
         private Cell GetCurrentCell() => map.GetCell(row: realCursorPos.Y, column: realCursorPos.X);

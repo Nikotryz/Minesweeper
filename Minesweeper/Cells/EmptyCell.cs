@@ -36,7 +36,7 @@
             if (countOfMines == 0)
                 return " ";
 
-            return $"[{countColors[countOfMines]} on grey35]{countOfMines}[/]";
+            return $"[{countColors[countOfMines]}]{countOfMines}[/]";
         }
     }
 

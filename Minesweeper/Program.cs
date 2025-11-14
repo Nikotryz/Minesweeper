@@ -1,4 +1,5 @@
 ﻿using Minesweeper.Difficulties;
+using Minesweeper.GameService;
 using Spectre.Console;
 using System.Runtime.InteropServices;
 
@@ -21,7 +22,7 @@ namespace Minesweeper
         }
         static void Main(string[] args)
         {
-            //MaximizeWindow();
+            MaximizeWindow();
             Console.Title = "Сапер";
 
             string startMenu = $"""

@@ -1,4 +1,4 @@
-﻿namespace Minesweeper
+﻿namespace Minesweeper.GameService
 {
     /// <summary>
     /// Хранит координаты некоторой точки на поле в виде X, Y.
